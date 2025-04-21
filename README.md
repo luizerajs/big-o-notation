@@ -1,13 +1,26 @@
-# Big O Notation - Definição
+# Big O Notation – Entendendo a Complexidade dos Algoritmos
 
-Big O Notation é uma notação que expressa a complexidade de algoritmos, ou seja, o tempo de execução e o espaço utilizado por um algoritmo em função do tamanho da entrada: **"n"**.
+**Big O Notation** é uma forma de descrever a complexidade de algoritmos, ou seja, como o tempo de execução e o uso de memória (espaço) crescem em função do tamanho da entrada, representado por **"n"**.
 
-Essa notação é importante para entendermos como um algoritmo se comporta quando o tamanho da entrada aumenta, e assim podemos escolher o algoritmo mais eficiente para resolver um problema.
+Essa notação é fundamental para analisarmos o desempenho de algoritmos e entendermos como eles escalam à medida que a entrada aumenta. Com esse conhecimento, podemos tomar decisões mais assertivas na escolha da solução mais eficiente para determinado problema.
 
-Vale lembrar que o Big O Notation sempre é comparado com o **pior caso**, isso quer dizer que estamos analisando o tempo e espaço de execução do algoritmo no pior cenário possível.
+> **Importante:** A notação Big O geralmente considera o **pior caso** de execução, ou seja, o cenário em que o algoritmo levaria mais tempo ou utilizaria mais recursos.
 
-Dentro deste repositório, veremos exemplos de complexidade de algoritmos em relação ao tempo e espaço de cada notação.
+## O que você encontrará neste repositório
 
-Muito do que está exemplificado e explicado aqui é baseado no curso completo de Big O Notation da FreeCodeCamp, que é um curso gratuito e muito bom.
+Neste repositório, você encontrará exemplos práticos que ilustram diferentes tipos de complexidade de tempo e espaço, como:
 
-[Link do curso](https://youtu.be/Mo4vesaut8g)
+- `O(1)` – Constante
+- `O(n)` – Linear
+- `O(n²)` – Quadrática
+- `O(log n)` – Logarítmica
+- `O(n log n)` – Linearítmica
+- Entre outras...
+
+Os exemplos são pensados para facilitar a visualização e o entendimento da teoria por trás de cada tipo de complexidade.
+
+## Referência utilizada
+
+Grande parte do conteúdo deste repositório foi inspirado no excelente curso gratuito da FreeCodeCamp sobre Big O Notation.
+
+🎥 [Assista ao curso no YouTube](https://youtu.be/Mo4vesaut8g)
