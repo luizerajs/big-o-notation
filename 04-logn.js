@@ -1,10 +1,11 @@
 // O(log n) - Logarítmica (tempo)
-function binarySearch(array, target) {
+function binarySearchIterative(array, target) {
   let left = 0;
   let right = array.length - 1;
 
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
+
     if (array[mid] === target) {
       return mid; // Elemento encontrado
     } else if (array[mid] < target) {
@@ -13,12 +14,13 @@ function binarySearch(array, target) {
       right = mid - 1; // Busca na metade esquerda
     }
   }
+
   return -1; // Elemento não encontrado
 }
 
 // O(log n) - Logarítmica (espaço)
 let count = 0;
-function logSpace(n) {
+function logSpaceRecursive(n) {
   if (n <= 1) {
     return count;
   }
@@ -30,10 +32,10 @@ function logSpace(n) {
 // Usando as funções
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const target = 7;
-const result = binarySearch(array, target);
+const result = binarySearchIterative(array, target);
 console.log(`Elemento ${target} encontrado no índice: ${result}`);
 
-console.log(`Espaço logarítmico: ${logSpace(8)}`); // 3
+console.log(`Espaço logarítmico: ${logSpaceRecursive(8)}`); // 3
 
 /**
  * Explicação:

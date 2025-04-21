@@ -1,15 +1,15 @@
 // O(n) - Linear (tempo)
 function printAllElements(array) {
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
+  for (const i of array) {
+    console.log(i);
   }
 }
 
 // O(n) - Linear (espaço)
-function duplicateArray(n) {
+function duplicateArray(array) {
   const newArray = [];
-  for (let i = 0; i < n.length; i++) {
-    newArray[i] = n[i];
+  for (const i of array) {
+    newArray.push(i);
   }
   return newArray;
 }

@@ -1,8 +1,8 @@
 // O(n^2) - Quadratica (tempo)
 function printAllPairs(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      console.log(array[i], array[j]);
+  for (const i of array) {
+    for (const j of array) {
+      console.log(i, j);
     }
   }
 }
@@ -10,10 +10,10 @@ function printAllPairs(array) {
 // O(n^2) - Quadratica (espaço)
 function createMatrix(array) {
   const matrix = [];
-  for (let i = 0; i < array.length; i++) {
+  for (const i of array) {
     const row = [];
-    for (let j = 0; j < array.length; j++) {
-      row.push(array[i] * array[j]);
+    for (const j of array) {
+      row.push(i * j);
     }
     matrix.push(row);
   }
