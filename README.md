@@ -11,10 +11,10 @@ Essa notação é fundamental para analisarmos o desempenho de algoritmos e ente
 Neste repositório, você encontrará exemplos práticos que ilustram diferentes tipos de complexidade de tempo e espaço, como:
 
 - `O(1)` – Constante
-- `O(n)` – Linear
-- `O(n²)` – Quadrática
 - `O(log n)` – Logarítmica
+- `O(n)` – Linear
 - `O(n log n)` – Linearítmica
+- `O(n²)` – Quadrática
 - `O(2^n)` - Exponencial
 - `O(n!)` - Fatorial
 - Entre outras...
