@@ -15,6 +15,8 @@ Neste repositório, você encontrará exemplos práticos que ilustram diferentes
 - `O(n²)` – Quadrática
 - `O(log n)` – Logarítmica
 - `O(n log n)` – Linearítmica
+- `O(2^n)` - Exponencial
+- `O(n!)` - Fatorial
 - Entre outras...
 
 Os exemplos são pensados para facilitar a visualização e o entendimento da teoria por trás de cada tipo de complexidade.
