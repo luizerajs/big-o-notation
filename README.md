@@ -25,4 +25,5 @@ Os exemplos são pensados para facilitar a visualização e o entendimento da te
 
 Grande parte do conteúdo deste repositório foi inspirado no excelente curso gratuito da FreeCodeCamp sobre Big O Notation.
 
-🎥 [Assista ao curso no YouTube](https://youtu.be/Mo4vesaut8g)
+- [Assista ao curso no YouTube](https://youtu.be/Mo4vesaut8g)
+- [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
