@@ -1,33 +1,50 @@
 // O(n!) - Fatorial (tempo)
-function factorial(n) {
-  if (n <= 1) {
-    return 1;
+// Exemplo de uma função com complexidade de tempo fatorial (O(n!)):
+function travelingSalesmanProblem(cities, currentCity, visited, cost) {
+  if (visited.size === cities.length) {
+    return cost + cities[currentCity][0]; // Retorna ao ponto inicial
   }
-  return n * factorial(n - 1);
+
+  let minCost = Infinity;
+
+  for (let nextCity = 0; nextCity < cities.length; nextCity++) {
+    if (!visited.has(nextCity)) {
+      visited.add(nextCity);
+      const newCost = travelingSalesmanProblem(
+        cities,
+        nextCity,
+        visited,
+        cost + cities[currentCity][nextCity]
+      );
+      minCost = Math.min(minCost, newCost);
+      visited.delete(nextCity);
+    }
+  }
+
+  return minCost;
 }
 
-// Usando a função
-console.time("n = 4");
-const n = 4;
-const result = factorial(n);
-console.log(`Fatorial de ${n} é: ${result}`); // 24
-console.timeEnd("n = 4");
+// Exemplo de uso:
+const cities = [
+  [0, 10, 15, 20],
+  [10, 0, 35, 25],
+  [15, 35, 0, 30],
+  [20, 25, 30, 0],
+];
 
-console.log("----------------------------------");
-
-console.time("n2 = 5");
-const n2 = 5;
-const result2 = factorial(n2);
-console.log(`Fatorial de ${n2} é: ${result2}`); // 120
-console.timeEnd("n2 = 5");
+const visited = new Set();
+visited.add(0); // Começa na cidade 0
+const result = travelingSalesmanProblem(cities, 0, visited, 0);
+console.log(`Custo mínimo do caminho: ${result}`); // 80
 
 /**
  * Explicação:
- * A função `factorial` calcula o fatorial de um número n de forma recursiva.
- * O tempo de execução cresce rapidamente com o aumento de n,
- * pois o número de chamadas recursivas aumenta exponencialmente.
- 
- * Isso resulta em uma complexidade temporal de O(n!),
- * onde n! (fatorial de n) é o produto de todos os números inteiros positivos até n.
- * 
+ * A função do caixeiro viajante (traveling salesman problem) é um exemplo clássico
+ * de um problema NP-difícil, onde o tempo de execução cresce fatorialmente
+ * com o número de cidades (n).
+ *
+ * Isso ocorre porque a função tenta todas as permutações possíveis
+ * de cidades para encontrar o caminho mais curto,
+ * resultando em uma complexidade de tempo O(n!).
+ *
  */
